@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <title>Trivia</title>
+</head>
+<body>
+    <div class="container justify-content-center">
+        <div class="row d-flex justify-content-center">
+            <h1 class="display-3"><u>Pokemon The Animated Series Trivia</u></h1>
+        </div>
+        <div id="timer" class="row display-4 d-flex justify-content-center mb-5">35 Seconds Time Starts Now!</div>
+        <div id="trivia-wrapper">
+            <h3 class="row question d-flex justify-content-center">Which Gym was Misty the Leader of?</h3>
+                <div class="row answer justify-content-center mb-5">
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q1Answer"> Viridian City Gym   
+                    <input id="yes" class="mr-1 ml-3 mt-2" type="radio" name="q1Answer"> Cerulean City Gym 
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q1Answer"> Celadon City Gym
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q1Answer"> Pewter City Gym 
+                </div>   
+            <h3 class="row question d-flex justify-content-center">Bill is famous for developing _____?</h3>
+                <div class="row answer justify-content-center mb-5">
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q2Answer"> The PokeDex   
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q2Answer"> The PokeBall 
+                    <input id="yes" class="mr-1 ml-3 mt-2" type="radio" name="q2Answer"> The Pokemon Storage System
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q2Answer"> The Pokemon League
+                </div>
+            <h3 class="row question d-flex justify-content-center">How many Badges are required to Compete in The Pokemon League</h3>
+                <div class="row answer justify-content-center mb-5">
+                    <input id="yes" class="mr-1 ml-3 mt-2" type="radio" name="q3Answer"> 8   
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q3Answer"> 7  
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q3Answer"> 5
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q3Answer"> 10 
+                </div>
+            <h3 class="row question d-flex justify-content-center">Which Kanto town has the haunted pokemon tower?</h3>
+                <div class="row answer justify-content-center mb-5">
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q4Answer"> Saffron City  
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q4Answer"> Pallet Town 
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q4Answer"> Fuchsia City
+                    <input id="yes" class="mr-1 ml-3 mt-2" type="radio" name="q4Answer"> Lavender Town 
+                </div>
+            <h3 class="row question d-flex justify-content-center">The first Pokémon ever designed was _____?</h3>
+                <div class="row answer justify-content-center mb-5">
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q5Answer"> Pikachu  
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q5Answer"> Jigglypuff 
+                    <input id="yes" class="mr-1 ml-3 mt-2" type="radio" name="q5Answer"> Rhydon
+                    <input class="mr-1 ml-3 mt-2" type="radio" name="q5Answer"> Gengar
+                </div>
+        </div>       
+    </div>
+    <script src="assets/javascript/app.js"></script>
+</body>
+</html>
