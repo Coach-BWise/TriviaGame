@@ -11,12 +11,19 @@ $(document).ready(function() {
         if (timeLeft == 0) {
             clearTimeout(timerId);
             timesUp();
+            elem.innerHTML = 'Times Up! Lets see how you did!'
         } else {
             elem.innerHTML = timeLeft + ' seconds remaining';
             timeLeft--;
         }
     }
     
+    $('#submit').on('click', function(){
+        clearTimeout(timerId);
+        timesUp();
+        elem.innerHTML = 'Submitted! Lets see how you did!'
+    });
+
     function timesUp() {
         
         var correct = 0;
@@ -43,14 +50,15 @@ $(document).ready(function() {
         }
         incorrect = 5-correct;
 
-        
-        elem.innerHTML = 'Times Up! Lets see how you did!'
-        
-
         $(trivia).empty();
-        $("<div id='right' class='d-flex justify-content-center'>").appendTo(trivia).text("Correct: " + correct);
-        $("<div id='wrong' class='d-flex justify-content-center'>").appendTo(trivia).text("Incorrect: " + incorrect);
-        $("<div id='noGuess' class='d-flex justify-content-center'>").appendTo(trivia).text("Unanswered: " + unanswered);
-
+        $("<div id='resultsWrapper' class='justify-content-center'>").appendTo(trivia);
+        $("<div id='right' class='justify-content-center'>").appendTo('#resultsWrapper').text("Correct: " + correct);
+        $("<div id='wrong'>").appendTo('#resultsWrapper').text("Incorrect: " + incorrect);
+        $("<div id='noGuess'>").appendTo('#resultsWrapper').text("Unanswered: " + unanswered);
+        $("<button id='playAgain' class='col-lg-6 col-sm-12'>").appendTo('#resultsWrapper').text("Play Again");
+        
+        $('#playAgain').on('click', function(){
+            window.location.reload(true);
+        })
     }
 })
